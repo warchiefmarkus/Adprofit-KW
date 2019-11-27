@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8acc31e3-ef1c-41f5-8c98-d9050b72a124}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>adprofit.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+    <InterpreterVersion />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="adv\assets\css\style.css" />
+    <Content Include="adv\assets\img\128x128.png" />
+    <Content Include="adv\assets\img\16x16.png" />
+    <Content Include="adv\assets\img\32x32.png" />
+    <Content Include="adv\assets\img\48x48.png" />
+    <Content Include="adv\assets\img\icon.png" />
+    <Content Include="adv\assets\img\preloader.gif" />
+    <Content Include="adv\assets\js\jquery.js" />
+    <Content Include="adv\assets\vendor\jquery-scrollspy\example\example-1.html" />
+    <Content Include="adv\assets\vendor\jquery-scrollspy\scrollspy.js" />
+    <Content Include="adv\assets\vendor\mem\mem.js" />
+    <Content Include="adv\background.js" />
+    <Content Include="adv\content.js" />
+    <Content Include="adv\popup.css" />
+    <Content Include="adv\popup.html" />
+    <Content Include="adv\popup.js" />
+    <Content Include="links.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="adprofit.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="adv" />
+    <Folder Include="adv\assets\" />
+    <Folder Include="adv\assets\css" />
+    <Folder Include="adv\assets\img" />
+    <Folder Include="adv\assets\js" />
+    <Folder Include="adv\assets\vendor\" />
+    <Folder Include="adv\assets\vendor\jquery-scrollspy" />
+    <Folder Include="adv\assets\vendor\jquery-scrollspy\example" />
+    <Folder Include="adv\assets\vendor\mem" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>

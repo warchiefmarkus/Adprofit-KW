@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="ru-RU">
+  	<head>
+	    <title>Cтатистика</title>
+	    <!-- Подключаю стили-->
+		<link href="popup.css" rel="stylesheet" type="text/css"/>
+  	</head>
+  	<body>
+  		<!-- меню -->
+  		<div id="preloader" class="text-center" style="display: block;">
+  			<img src="/assets/img/preloader.gif">
+  		</div>
+
+
+		<!-- блок данных пользователя -->
+		<div id="content" style="display: none;">
+			<div>
+				<div class="wrap_head">
+					<div style="display: inline-block;">
+						<a href="https://advprofit.ru/u/panel" target="_blank" title="Перейти в линый кабинет">
+							<span style="color: #4ccb89;">Adv</span><span style="font-size: 10px;"> </span><span style="color: #3a97e6;">Pro<span style="letter-spacing: 1px;">fit</span></span>
+						</a>
+					</div>
+					<div style="display: inline-block; float: right; font-size: 16px; text-shadow: none; color: #7d7d7d; padding-top: 6px; padding-right: 4px;">
+						<div id="current_date" style="text-align: right; font-weight: normal;" title="Сегодня"> </div>
+						<div style="text-align: right;">
+							<span class="btn_visible_email show_email" style="">скрыть</span>
+							<span id="user_email"  title="Ваш email"> </span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
+				<div class="left col-50 left_block">
+					<div class="header_block">Ваши данные</div>
+					<div class="wrap_span">ID: <span class="right"><span id="user_id"></span></span></div>
+					<div class="wrap_span">Баланс: <span class="right"><span id="user_balance"></span> руб.</span></div>
+					<div class="wrap_span">Личных рефералов: <span class="right"><span id="user_referal"></span> чел.</span></div>
+				</div>
+				<div class="right col-50 right_block">
+					<div class="header_block">Сегодня</div>
+					<div class="wrap_span">Просмотров: <span class="right"><span id="user_view"></span></span></div>
+					<div class="wrap_span">Заработано: <span class="right"><span id="user_reward"></span> руб.</span></div>
+					<div class="wrap_span">От рефералов: <span class="right"><span id="user_reward_referal"></span> руб.</span></div>
+				</div> 
+				<div class="clearfix"></div>
+
+				<a href="https://advprofit.ru/u/panel" class="btn btn-lk left col-50" target="_blank" title="Перейти в линый кабинет"> Личный кабинет </a>
+				<button id="btn-stop" class="btn btn-stop right col-50" style="display: none;" title="Отключить показы"> Показы включены </button>
+				<button id="btn-start" class="btn btn-start right col-50" style="display: none;" title="Включить показы"> Показы отключены </button>
+				<div class="clearfix"></div>
+			</div>
+			<div style="margin-top: 8px;">
+				<div class="left">
+					<span id="test_btn" class="test_btn">Тестирование </span>
+					<span id="test_result" class="test_result"></span>
+				</div>
+				<div class="right">
+					<span class="ext_version">Версия 1.4.7</span>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+
+		<!-- Кнопка входа на сайт, если пользователь не авторизован -->
+		<div id="login_button_block" class="text-center" style="display: none;">
+			<div style="font-size: 16px; color: #444; display: inline-block;">Войдите в аккаунт</div>
+			<br>
+			<a href="https://advprofit.ru/main/login" class="btn btn-login" target="_blank"> Войти </a>
+		</div>
+
+		<div id="stor" style="display: none;"></div>
+
+		<!-- скрипт, выполняющийся при нажатии на иконку расширения-->
+		<script src="/assets/js/jquery.js"></script>
+	    <script src="popup.js"></script>
+  	</body>
+</html>
